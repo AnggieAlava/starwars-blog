@@ -1,3 +1,8 @@
-/* 
-    General Styles
-*/
+#starWar-img {
+    width: 100px;
+    height: 50px;
+}
+
+#main-nav {
+    padding: 20px 60px;
+}
