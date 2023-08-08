@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Descriptions } from "./views/descriptions";
+
 import { Home } from "./views/home";
-import { Navbar } from "./component/navbar";
+// import { Navbar } from "./component/navbar";
 
 import injectContext from "./store/appContext";
 
@@ -18,12 +18,12 @@ const Layout = () => {
 	return (
 		<div>
 			<BrowserRouter basename={basename}>
-					<Navbar />
-					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/descriptions" element={<Descriptions />} />
-						<Route path="*" element={<h1>Not found!</h1>} />
-					</Routes>
+				{/* <Navbar /> */}
+				<Routes>
+					<Route path="/" element={<Home />} />
+					{/* <Route path="/" element={< />} /> */}
+					<Route path="*" element={<h1>Not found!</h1>} />
+				</Routes>
 			</BrowserRouter>
 		</div>
 	);
