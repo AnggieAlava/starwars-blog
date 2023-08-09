@@ -13,19 +13,17 @@ export const Vehicles = () => {
             </div>
             <div className="container py-2 overflow-auto">
                 <div className="d-flex flex-row flex-nowrap">
-                    {store.vehicles.map((item, id) => {
-                        let partes = item.url.split("/");
-                        let uid = partes[partes.length - 1];
-                        console.log(partes)
+                    {store.vehicles.map((item) => {
+
                         return (
 
-                            <div id="card-wrap" className="card mx-1" style={{ minWidth: "18rem" }} key={id}>
-                                <img src={"https://starwars-visualguide.com/assets/img/vehicles/" + (id + 1) + ".jpg"} className="card-img-top" />
+                            <div id="card-wrap" className="card mx-1" style={{ minWidth: "18rem" }} key={item.uid}>
+                                <img src={`https://starwars-visualguide.com/assets/img/vehicles/${item.uid}.jpg`} className="card-img-top" />
                                 <div className="card-body">
                                     <h5 className="card-title">{item.name}</h5>
                                     <p className="card-text">Model: {item.model}</p>
-                                    <p className="card-text">Class: {item.vehicle_class}</p>
-                                    <Link to={`/vehicle/${uid}`} type="button" className="btn btn-primary">Learn more</Link>
+                                    <p className="card-text">Crew: {item.crew}</p>
+                                    <Link to={`/vehicle/${item.uid}`} type="button" className="btn btn-primary">Learn more</Link>
                                     <button type="button" className="btn btn-outline-warning">💛</button>
                                 </div>
                             </div>

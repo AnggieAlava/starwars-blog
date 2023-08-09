@@ -17,7 +17,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				let resources = await Promise.all(res_list.map(async (c) => {
 					let res = await fetch(c.url)
 					let data = await res.json()
-					return data.result.properties
+					return {...data.result.properties, uid: data.result.uid}
 				}))
 				let store = { ...getStore() }
 				store[category] = resources
@@ -30,7 +30,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			loadSomeData: async () => {
 				getActions().loadSWAPI('people', 'characters')
 				getActions().loadSWAPI('planets', 'planets')
-				getActions().loadSWAPI('starships', 'vehicles')
+				getActions().loadSWAPI('vehicles', 'vehicles')
 
 
 
