@@ -1,7 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Characters } from "../component/Characters";
+import { Planets } from "../component/Planets";
+import { Vehicles } from "../component/Vehicles";
 
 export const Home = () => (
-	< Characters />
+	<>
+		< Characters />
+		< Planets />
+		< Vehicles />
+	</>
 );

@@ -1,10 +1,14 @@
 import React from "react";
+import { useParams } from "react-router";
 
-export const Descriptions = () => (
-	<div className="text-center mt-5">
-		<h1>DESCRIPTIONS</h1>
-		<p>
-			HERE IS THE DESCRIPTION OF EACH CHARACTER, VEHICLES, PLANET
-		</p>
-	</div>
-);
+
+
+export const DetailVehicles = () => {
+    const params = useParams()
+    return (
+
+        <>
+            <h1>Descripcion de Vehicle: {params.uid}</h1>
+        </>
+    )
+}
