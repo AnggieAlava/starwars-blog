@@ -24,8 +24,10 @@ export const Characters = () => {
                                     <p className="card-text">Gender: {item.gender}</p>
                                     <p className="card-text">Eyes: {item.eye_color}</p>
                                     <p className="card-text">Birth year: {item.birth_year}</p>
-                                    <Link to={`/character/${item.uid}`} type="button" className="btn btn-primary">Learn more</Link>
-                                    <button type="button" className="btn btn-outline-warning">💛</button>
+                                    <div className="btn-container">
+                                        <Link to={`/character/${item.uid}`} type="button" className="btn btn-primary">Learn more</Link>
+                                        <button type="button" className="btn btn-outline-warning">💛</button>
+                                    </div>
                                 </div>
                             </div>
                         )

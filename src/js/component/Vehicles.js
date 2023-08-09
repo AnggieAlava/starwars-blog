@@ -23,8 +23,10 @@ export const Vehicles = () => {
                                     <h5 className="card-title">{item.name}</h5>
                                     <p className="card-text">Model: {item.model}</p>
                                     <p className="card-text">Crew: {item.crew}</p>
-                                    <Link to={`/vehicle/${item.uid}`} type="button" className="btn btn-primary">Learn more</Link>
-                                    <button type="button" className="btn btn-outline-warning">💛</button>
+                                    <div className="btn-container">
+                                        <Link to={`/vehicle/${item.uid}`} type="button" className="btn btn-primary">Learn more</Link>
+                                        <button type="button" className="btn btn-outline-warning">💛</button>
+                                    </div>
                                 </div>
                             </div>
                         )
