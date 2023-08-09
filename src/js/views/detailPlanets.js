@@ -18,7 +18,14 @@ export const DetailPlanets = () => {
             <div className="card mx-1" id="detail-card" style={{ minWidth: "18rem" }}>
                 <div className="row g-0">
                     <div className="col-md-4">
-                        <img src={`https://starwars-visualguide.com/assets/img/planets/${planet.uid}.jpg`} className="card-img-top" />
+                        <img
+                            src={`https://starwars-visualguide.com/assets/img/planets/${planet.uid}.jpg`}
+                            onError={(e) => {
+                                e.target.onerror = null;
+                                e.target.src = "https://starwars-visualguide.com/assets/img/placeholder.jpg";
+                            }}
+                            className="card-img-top"
+                        />
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">

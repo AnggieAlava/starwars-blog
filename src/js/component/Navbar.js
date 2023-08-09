@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import starwar from "../../img/starwar.png";
+import Favorites from "./Favorites";
 
 const Navbar = () => {
 	return (
@@ -8,11 +9,7 @@ const Navbar = () => {
 			<Link to="/">
 				<span className="navbar-brand mb-0 h1"><img id="starWar-img" src={starwar} /></span>
 			</Link>
-			<div className="dropdown">
-				<button className="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-					Favorites
-				</button>
-			</div>
+			<Favorites />
 		</nav>
 	);
 };
