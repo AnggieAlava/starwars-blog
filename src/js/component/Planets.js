@@ -30,7 +30,7 @@ export const Planets = () => {
                                     <p className="card-text">Terrain: {item.terrain}</p>
                                     <div className="btn-container">
                                         <Link to={`/planet/${item.uid}`} type="button" className="btn btn-primary">Learn more</Link>
-                                        <button type="button" className="btn btn-outline-warning">💛</button>
+                                        <button type="button" className="btn btn-outline-warning">Add favorites</button>
                                     </div>
                                 </div>
                             </div>

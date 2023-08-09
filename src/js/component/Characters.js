@@ -3,7 +3,11 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 export const Characters = () => {
-    const { store, action } = useContext(Context);
+    const { store, actions } = useContext(Context);
+
+    const handleAddToFavorites = (index) => {
+        actions.addToFavorites(index);
+    };
 
     return (
         <>
@@ -13,10 +17,9 @@ export const Characters = () => {
             </div>
             <div className="container py-2 overflow-auto">
                 <div className="d-flex flex-row flex-nowrap">
-                    {store.characters.map((item) => {
+                    {store.characters.map((item, index) => {
 
                         return (
-
                             <div id="card-wrap" className="card mx-1" style={{ minWidth: "18rem" }} key={item.uid}>
                                 <img src={`https://starwars-visualguide.com/assets/img/characters/${item.uid}.jpg`} className="card-img-top" />
                                 <div className="card-body">
@@ -26,7 +29,7 @@ export const Characters = () => {
                                     <p className="card-text">Birth year: {item.birth_year}</p>
                                     <div className="btn-container">
                                         <Link to={`/character/${item.uid}`} type="button" className="btn btn-primary">Learn more</Link>
-                                        <button type="button" className="btn btn-outline-warning">💛</button>
+                                        <button type="button" className="btn btn-outline-warning" onClick={() => handleAddToFavorites(index)}>Add favorites</button>
                                     </div>
                                 </div>
                             </div>
@@ -35,7 +38,5 @@ export const Characters = () => {
                 </div>
             </div>
         </>
-
-
     );
 };

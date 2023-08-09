@@ -17,7 +17,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				let resources = await Promise.all(res_list.map(async (c) => {
 					let res = await fetch(c.url)
 					let data = await res.json()
-					return {...data.result.properties, uid: data.result.uid}
+					return { ...data.result.properties, uid: data.result.uid }
 				}))
 				let store = { ...getStore() }
 				store[category] = resources
@@ -36,22 +36,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 
 			},
-			changeColor: (index, color) => {
-				//get the store
+			addToFavorites: (index) => {
 				const store = getStore();
-
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
+				const favorites = [...store.favorites, index];
+				setStore({ ...store, favorites: favorites });
 			}
 		}
-	};
+
+
+	}
 };
 
 export default getState;

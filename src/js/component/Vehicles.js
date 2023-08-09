@@ -25,7 +25,7 @@ export const Vehicles = () => {
                                     <p className="card-text">Crew: {item.crew}</p>
                                     <div className="btn-container">
                                         <Link to={`/vehicle/${item.uid}`} type="button" className="btn btn-primary">Learn more</Link>
-                                        <button type="button" className="btn btn-outline-warning">💛</button>
+                                        <button type="button" className="btn btn-outline-warning">Add favorites</button>
                                     </div>
                                 </div>
                             </div>
