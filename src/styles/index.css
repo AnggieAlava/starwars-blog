@@ -1,40 +1,46 @@
 #starWar-img {
-    width: 100px;
-    height: 50px;
+  width: 100px;
+  height: 50px;
 }
 
 .navbar {
-    padding: 20px 60px;
+  padding: 20px 60px;
 }
 
 .detail-container {
-    color: rgb(150, 61, 61);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  color: rgb(150, 61, 61);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #detail-line {
-    color:  rgb(150, 61, 61);
-    height: 3px;
+  color: rgb(150, 61, 61);
+  height: 3px;
 }
 
 #detail-card {
-    border: none;
+  border: none;
 }
 
 #description {
-    line-height: 1cm;
+  line-height: 1cm;
 }
 
 .btn-container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .planets-card {
-    justify-content: space-around;
-    flex-direction: column;
-    display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  display: flex;
+}
+
+.trash-icon {
+  float: right;
+  margin-right: 8px;
+  color: red;
 }

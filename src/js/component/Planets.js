@@ -3,7 +3,10 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 export const Planets = () => {
-    const { store, action } = useContext(Context);
+    const { store, actions } = useContext(Context);
+    const handleAddToFavorites = (item) => {
+        actions.addToFavorites(item);
+    };
 
     return (
         <>
@@ -30,7 +33,7 @@ export const Planets = () => {
                                     <p className="card-text">Terrain: {item.terrain}</p>
                                     <div className="btn-container">
                                         <Link to={`/planet/${item.uid}`} type="button" className="btn btn-primary">Learn more</Link>
-                                        <button type="button" className="btn btn-outline-warning">Add favorites</button>
+                                        <button type="button" className="btn btn-outline-warning" onClick={() => handleAddToFavorites(item)} >Add favorites</button>
                                     </div>
                                 </div>
                             </div>

@@ -36,11 +36,35 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 
 			},
-			addToFavorites: (index) => {
+
+			addToFavorites: (item) => {
 				const store = getStore();
-				const favorites = [...store.favorites, index];
+				const favorites = [...store.favorites];
+
+				const indexToRemove = favorites.indexOf(item);
+
+				if (indexToRemove !== -1) {
+					// Si ya está en la lista lo quito
+					favorites.splice(indexToRemove, 1);
+				} else {
+					// Si no está en la lista  lo agrego
+					favorites.push(item);
+				}
+
 				setStore({ ...store, favorites: favorites });
+			},
+
+			deleteFavorites: (index) => {
+				const store = getStore();
+				const favorites = [...store.favorites];
+
+				favorites.splice(index, 1);
+
+				setStore({ ...store, favorites: favorites });
+
 			}
+
+
 		}
 
 

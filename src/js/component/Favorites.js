@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 
 const Favorites = () => {
-    const { store } = useContext(Context);
+    const { store, actions } = useContext(Context);
 
     return (
         <div className="dropdown">
@@ -10,9 +10,9 @@ const Favorites = () => {
                 Favorites ({store.favorites.length})
             </button>
             <ul className="dropdown-menu">
-                {store.favorites.map((index) => (
-                    <li key={index}>
-                        {store.characters[index].name}
+                {store.favorites.map((item, index) => (
+                    <li id="" key={index}>
+                        {item.name} <a className="trash-icon" onClick={(e) => { actions.deleteFavorites(index) }}><i className="fas fa-trash"></i></a>
                     </li>
                 ))}
             </ul>
