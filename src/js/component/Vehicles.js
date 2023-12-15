@@ -27,7 +27,7 @@ export const Vehicles = () => {
                                     <p className="card-text">Model: {item.model}</p>
                                     <p className="card-text">Crew: {item.crew}</p>
                                     <div className="btn-container">
-                                        <Link to={`/vehicle/${item.uid}`} type="button" className="btn btn-primary">Learn more</Link>
+                                        <Link to={`/vehicle/${item.uid}`} type="button" className="btn btn-outline-danger">Learn more</Link>
                                         <button type="button" className="btn btn-outline-warning" onClick={() => handleAddToFavorites(item)} >Add favorites</button>
                                     </div>
                                 </div>

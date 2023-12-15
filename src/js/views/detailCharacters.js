@@ -17,7 +17,7 @@ export const DetailCharacters = () => {
         <div className="container">
             <div className="card mx-1" id="detail-card" style={{ minWidth: "18rem" }}>
                 <div className="row g-0">
-                    <div className="col-md-4">
+                    <div className="col-md-4 bg-view">
                         <img src={`https://starwars-visualguide.com/assets/img/characters/${character.uid}.jpg`} className="card-img-top" />
                     </div>
                     <div className="col-md-8">

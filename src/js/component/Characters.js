@@ -28,7 +28,7 @@ export const Characters = () => {
                                     <p className="card-text">Eyes: {item.eye_color}</p>
                                     <p className="card-text">Birth year: {item.birth_year}</p>
                                     <div className="btn-container">
-                                        <Link to={`/character/${item.uid}`} type="button" className="btn btn-primary">Learn more</Link>
+                                        <Link to={`/character/${item.uid}`} type="button" className="btn btn-outline-danger">Learn more</Link>
                                         <button type="button" className="btn btn-outline-warning" onClick={() => handleAddToFavorites(item)}>Add favorites</button>
                                     </div>
                                 </div>
