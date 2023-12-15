@@ -1,10 +1,30 @@
 {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "workbench.editorAssociations": {   
-        "*.md": "vscode.markdown.preview.editor"
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    }
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.editorAssociations": {
+    "*.md": "vscode.markdown.preview.editor"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#ffff33",
+    "activityBar.background": "#ffff33",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#00bfbf",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#15202b99",
+    "sash.hoverBorder": "#ffff33",
+    "statusBar.background": "#ffff00",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#cccc00",
+    "statusBarItem.remoteBackground": "#ffff00",
+    "statusBarItem.remoteForeground": "#15202b",
+    "titleBar.activeBackground": "#ffff00",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#ffff0099",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "yellow"
 }
