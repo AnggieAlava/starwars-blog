@@ -1,0 +1,27 @@
+version: "3.3"
+services:
+  app:
+    image: registry.gitlab.com/anggieprojects/starwars:latest
+    networks:
+      - net
+      - traefik-public
+    logging:
+      driver: json-file
+    deploy:
+      labels:
+        traefik.http.routers.starwars-https.entrypoints: https
+        traefik.http.routers.starwars-https.rule: Host(`starwars.angeles.rocks`)
+        traefik.http.routers.starwars-http.rule: Host(`starwars.angeles.rocks`)
+        traefik.constraint-label: traefik-public
+        traefik.http.routers.starwars-https.tls.certresolver: le
+        traefik.http.services.starwars.loadbalancer.server.port: "80"
+        traefik.http.routers.starwars-http.middlewares: https-redirect
+        traefik.docker.network: traefik-public
+        traefik.enable: "true"
+        traefik.http.routers.starwars-http.entrypoints: http
+        traefik.http.routers.starwars-https.tls: "true"
+networks:
+  net:
+    driver: overlay
+  traefik-public:
+    external: true
