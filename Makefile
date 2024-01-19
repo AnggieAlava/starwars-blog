@@ -9,3 +9,9 @@ run: ##Run the app
 	npm run start
 build: ##Build the app
 	npm run build
+
+##@ Docker
+build-gitlab:
+	docker build -t registry.gitlab.com/anggieprojects/starwars .
+push-gitlab:
+	docker push registry.gitlab.com/anggieprojects/starwars
