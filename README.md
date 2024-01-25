@@ -22,6 +22,12 @@ This project was something I developed while I was preparing as a Full Stack Dev
 
 Check out the live demo [HERE...](https://starwars.angeles.rocks/).
 
+## Authors
+
+[Anggie Alava](https://www.linkedin.com/in/anggiealava/)
+
+![Logo](./logo192x192.png)
+
 ## Preview
 
 ![Project Preview](./src/img/Starwars.gif)
